@@ -13,7 +13,7 @@ class CreateTableProdutos extends Migration
      */
     public function up()
     {
-        Schema::create('produtos', function (Blueprint $table) {
+        Schema::create('produtos', function (Blueprint $table) {           
             $table->bigIncrements('id');
             $table->string('nome');
             $table->float('valor_unitario');

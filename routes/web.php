@@ -11,10 +11,36 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route:: get('/ok', function(){
-    return ['status' => true];
+Route::group(['middleware'=>'web'], function(){
+
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+ //   ProdutoController
+//Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+        Route::prefix('produtos')->group(function() {
+
+            Route::get('/', 'Web\ProdutoController@index')->name('produtos');
+
+            Route::get('/novo', 'Web\ProdutoController@create')->name('produtos.create');
+
+            Route::get('/{id}', 'Web\ProdutoController@show')->name('unico_proprodutos.storeduto');
+
+            Route::post('/', 'Web\ProdutoController@store')->name('produtos.store');
+
+            Route::put('/{id}', 'Web\ProdutoController@pdate')->name('update_produto');
+
+            Route::delete('/{id}', 'Web\ProdutoController@delete')->name('delete_Projetos');
+
+
+
+            //Criar os metodos no Controller
+
+    });
 });
