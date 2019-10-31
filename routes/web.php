@@ -34,7 +34,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
             Route::post('/', 'Web\ProdutoController@store')->name('produtos.store');
 
-            Route::put('/{id}', 'Web\ProdutoController@pdate')->name('update_produto');
+            Route::put('/{id}', 'Web\ProdutoController@urrtipdate')->name('update_produto');
+
+            Route::get('edit/{id}', 'Web\ProdutoController@edit')->name('produto.edit');
 
             Route::delete('/{id}', 'Web\ProdutoController@delete')->name('delete_Projetos');
 

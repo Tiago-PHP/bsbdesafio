@@ -28,11 +28,11 @@
     <tbody>
         @foreach ($products as $product)
             <tr>
-                <td>  {{ $product->id }} </td>
-                <td > {{ $product->nome }} </td>
-                <td>  {{ $product->valor_unitario }}  </td>
-                <td>  {{ $product->quantidade }}  </td>
-                <td>  {{ $product->situacao }}  </td>
+                <td> {{ $product->id }}  </td>
+                <td> {{ $product->nome }} </td>
+                <td> {{ $product->valor_unitario }}  </td>
+                <td> {{ $product->quantidade }}  </td>
+                <td> {{ $product->situacao }}  </td>
             </tr>
         @endforeach
     </tbody>

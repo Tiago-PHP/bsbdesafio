@@ -41,6 +41,11 @@ class ProdutoController extends Controller
         }
 
     }
+    public function edit ($id){
+        $produto =Produto::findOrFail($id);
+            return $produto;
+    }
+
         public function  update(Request $request, $id)
         {
             try{
@@ -63,8 +68,9 @@ class ProdutoController extends Controller
 
         }
 
-        public function delete(findOrFail $id)
+        public function delete($id)
         {
+            dd($id);
             try
             {
                 $id->delete();

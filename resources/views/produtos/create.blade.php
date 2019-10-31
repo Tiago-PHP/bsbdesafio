@@ -22,7 +22,7 @@
 
                         <div class="form-group has-feedback {{ $errors->has('nome') ? 'has-error' : '' }}">
                             <input type="text" name="nome" class="form-control" value="{{ old('nome') }}"
-                                   placeholder="Nome">
+                                   placeholder="nome">
                             <span class="form-control-feedback"></span>
                             @if ($errors->has('nome'))
                                 <span class="help-block">
@@ -32,16 +32,16 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Situação</label>
+                            <label for="exampleformcontrolselect1">situação</label>
                             <select class="form-control" id="situacao" name="situacao">
-                                <option value="">Selecione</option>
-                                <option value="1">Ativo</option>
-                                <option value="0">Inativo</option>
+                                <option value="">selecione</option>
+                                <option value="1">ativo</option>
+                                <option value="0">inativo</option>
                             </select>
                         </div>
                         <div class="form-group has-feedback {{ $errors->has('valor_unitario') ? 'has-error' : '' }}">
                             <input type="number" name="valor_unitario" class="form-control" value="{{ old('valor_unitario') }}"
-                                   placeholder="Valor UN">
+                                   placeholder="valor un">
                             <span class="form-control-feedback"></span>
                             @if ($errors->has('valor_unitario'))
                                 <span class="help-block">
@@ -52,7 +52,7 @@
 
                         <div class="form-group has-feedback {{ $errors->has('quantidade') ? 'has-error' : '' }}">
                             <input type="number" name="quantidade" class="form-control" value="{{ old('quantidade') }}"
-                                   placeholder="Quantidade">
+                                   placeholder="quantidade">
                             <span class="form-control-feedback"></span>
                             @if ($errors->has('quantidade'))
                                 <span class="help-block">
@@ -61,7 +61,7 @@
                             @endif
                         </div>
 
-                        <button type="submit" class="btn btn-success btn-block btn-flat"  >Salvar</button>
+                        <button type="submit" class="btn btn-success btn-block btn-flat"  >salvar</button>
                     </form>
                 </div>
             </div>

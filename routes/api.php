@@ -29,7 +29,7 @@ Route::namespace('API')->name('api.')->group(function(){
 
                 Route::put('/{id}','Pedidocontroller@update')->name('update_pedido');
 
-                Route::delete('/{id}','Pedidocontroller@delete')->name('delete_Projetos');
+                Route::delete('/{id}','Pedidocontroller@delete')->name('delete_pedido');
 
 });
 
