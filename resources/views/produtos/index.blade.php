@@ -21,8 +21,9 @@
             <th scope= "col" > # </th>
             <th scope= "col" > Nome </th>
             <th scope= "col" > Valor Unitário </th>
-            <th scope= "col" > situação </th>
             <th scope= "col" > Quantidade </th>
+            <th>Editar</th>
+            <th>Excluir</th>
         </tr>
     </thead>
     <tbody>
@@ -32,7 +33,8 @@
                 <td> {{ $product->nome }} </td>
                 <td> {{ $product->valor_unitario }}  </td>
                 <td> {{ $product->quantidade }}  </td>
-                <td> {{ $product->situacao }}  </td>
+                <td><a href="{{ route('produtos.edit',$product->id)}}" data-toggle="tooltip" data-original-title="Editar">Editar</a></td>
+                
             </tr>
         @endforeach
     </tbody>

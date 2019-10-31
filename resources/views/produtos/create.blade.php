@@ -31,14 +31,7 @@
                             @endif
                         </div>
 
-                        <div class="form-group">
-                            <label for="exampleformcontrolselect1">situação</label>
-                            <select class="form-control" id="situacao" name="situacao">
-                                <option value="">selecione</option>
-                                <option value="1">ativo</option>
-                                <option value="0">inativo</option>
-                            </select>
-                        </div>
+                    
                         <div class="form-group has-feedback {{ $errors->has('valor_unitario') ? 'has-error' : '' }}">
                             <input type="number" name="valor_unitario" class="form-control" value="{{ old('valor_unitario') }}"
                                    placeholder="valor un">

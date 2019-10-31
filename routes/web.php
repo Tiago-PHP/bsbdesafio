@@ -30,13 +30,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
             Route::get('/novo', 'Web\ProdutoController@create')->name('produtos.create');
 
-            Route::get('/{id}', 'Web\ProdutoController@show')->name('unico_proprodutos.storeduto');
+            Route::get('/{id}', 'Web\ProdutoController@show')->name('unico_produtos.storeduto');
 
             Route::post('/', 'Web\ProdutoController@store')->name('produtos.store');
 
-            Route::put('/{id}', 'Web\ProdutoController@urrtipdate')->name('update_produto');
+            Route::put('/{id}', 'Web\ProdutoController@update')->name('produtos.update');
 
-            Route::get('edit/{id}', 'Web\ProdutoController@edit')->name('produto.edit');
+            Route::get('edit/{id}', 'Web\ProdutoController@edit')->name('produtos.edit');
 
             Route::delete('/{id}', 'Web\ProdutoController@delete')->name('delete_Projetos');
 

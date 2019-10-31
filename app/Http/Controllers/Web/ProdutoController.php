@@ -43,11 +43,12 @@ class ProdutoController extends Controller
     }
     public function edit ($id){
         $produto =Produto::findOrFail($id);
-            return $produto;
+            return view('produtos.edit',compact('produto'));
     }
 
         public function  update(Request $request, $id)
         {
+            dd($request->all());
             try{
                 $productcom= $request->all();
                 $produto = $this->produto->find($id);
